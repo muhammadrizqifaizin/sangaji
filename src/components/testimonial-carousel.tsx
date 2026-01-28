@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
 import { useI18n } from '../lib/i18n'
+import topiImg from '../assets/img/topi.png'
 
 export default function TestimonialCarousel() {
   const { t } = useI18n()
-  
+
   useEffect(() => {
     $('.testimonial-carousel').owlCarousel({
       autoplay: true,
@@ -23,7 +24,7 @@ export default function TestimonialCarousel() {
     >
       <div
         className='testimonial-item text-center'
-        data-dot="<img className='img-fluid' src='/img/topi.png' alt=''>"
+        data-dot={`<img className='img-fluid' src='${topiImg}' alt=''>`}
       >
         <h4 className='text-uppercase'>Ivanderr</h4>
         <p className='text-primary'>{t('testimonial.role.student')}</p>
@@ -33,7 +34,7 @@ export default function TestimonialCarousel() {
       </div>
       <div
         className='testimonial-item text-center'
-        data-dot="<img className='img-fluid' src='/img/topi.png' alt=''>"
+        data-dot={`<img className='img-fluid' src='${topiImg}' alt=''>`}
       >
         <h4 className='text-uppercase'>Cahya Dwi</h4>
         <p className='text-primary'>{t('testimonial.role.student')}</p>
@@ -43,7 +44,7 @@ export default function TestimonialCarousel() {
       </div>
       <div
         className='testimonial-item text-center'
-        data-dot="<img className='img-fluid' src='/img/topi.png' alt=''>"
+        data-dot={`<img className='img-fluid' src='${topiImg}' alt=''>`}
       >
         <h4 className='text-uppercase'>Andi Sujatmiko</h4>
         <p className='text-primary'>{t('testimonial.role.teacher')}</p>

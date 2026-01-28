@@ -1,5 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useI18n } from '../lib/i18n'
+import team1 from '../assets/img/team-1.jpg'
+import team2 from '../assets/img/team-2.jpg'
+import team3 from '../assets/img/team-3.jpg'
 
 export const Route = createFileRoute('/team')({
   component: Team,
@@ -62,7 +65,7 @@ export function Team() {
                 <div className='team-img position-relative overflow-hidden'>
                   <img
                     className='img-fluid'
-                    src='/img/team-1.jpg'
+                    src={team1}
                     alt='Team 1 Image'
                   />
                   <div className='team-social'>
@@ -91,7 +94,7 @@ export function Team() {
                 <div className='team-img position-relative overflow-hidden'>
                   <img
                     className='img-fluid'
-                    src='/img/team-2.jpg'
+                    src={team2}
                     alt='Team 2 Image'
                   />
                   <div className='team-social'>
@@ -120,7 +123,7 @@ export function Team() {
                 <div className='team-img position-relative overflow-hidden'>
                   <img
                     className='img-fluid'
-                    src='/img/team-3.jpg'
+                    src={team3}
                     alt='Team 3 Image'
                   />
                   <div className='team-social'>
@@ -149,7 +152,7 @@ export function Team() {
                 <div className='team-img position-relative overflow-hidden'>
                   <img
                     className='img-fluid'
-                    src='/img/team-4.jpg'
+                    src={team3}
                     alt='Team 4 Image'
                   />
                   <div className='team-social'>

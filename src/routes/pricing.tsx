@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useI18n } from '../lib/i18n'
+import priceImg from '../assets/img/price.jpg'
 
 export const Route = createFileRoute('/pricing')({
   component: Pricing,
@@ -78,7 +79,7 @@ export function Pricing() {
               <div className='h-100'>
                 <img
                   className='img-fluid h-100'
-                  src='/img/price.jpg'
+                  src={priceImg}
                   alt='Price Image'
                 />
               </div>

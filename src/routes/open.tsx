@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useI18n } from '../lib/i18n'
+import openImg from '../assets/img/open.jpg'
 
 export const Route = createFileRoute('/open')({
   component: Open,
@@ -48,7 +49,7 @@ export function Open() {
               <div className='h-100'>
                 <img
                   className='img-fluid h-100'
-                  src='/img/open.jpg'
+                  src={openImg}
                   alt='Open Image'
                 />
               </div>

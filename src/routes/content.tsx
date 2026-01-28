@@ -1,4 +1,14 @@
 import { createFileRoute } from '@tanstack/react-router'
+import lofoSangajiImg from '../assets/img/lofo sangaji.png'
+import img1Img from '../assets/img/img1.png'
+import video1 from '../assets/video/video1.mp4'
+import video2 from '../assets/video/video2.mp4'
+import video3 from '../assets/video/video 3.mp4'
+import video4 from '../assets/video/video4.mp4'
+import video5 from '../assets/video/video5.mp4'
+import video6 from '../assets/video/video6.mp4'
+import video7 from '../assets/video/video7.mp4'
+import video8 from '../assets/video/8.mp4'
 
 export const Route = createFileRoute('/content')({
   component: Content,
@@ -65,12 +75,12 @@ export function Content() {
                 <div className='video-container'>
                   <img
                     className='img-fluid'
-                    src='/img/lofo sangaji.png'
+                    src={lofoSangajiImg}
                     alt='Video Thumbnail'
                     onClick={(event) => playVideo(event.currentTarget)}
                   />
                   <video className='img-fluid' controls>
-                    <source src='/video/video1.mp4' type='video/mp4' />
+                    <source src={video1} type='video/mp4' />
                     Browser Anda tidak mendukung video tag.
                   </video>
                   <div className='team-social'>
@@ -106,12 +116,12 @@ export function Content() {
                 <div className='video-container'>
                   <img
                     className='img-fluid'
-                    src='/img/lofo sangaji.png'
+                    src={lofoSangajiImg}
                     alt='Video Thumbnail'
                     onClick={(event) => playVideo(event.currentTarget)}
                   />
                   <video className='img-fluid' controls>
-                    <source src='/video/video2.mp4' type='video/mp4' />
+                    <source src={video2} type='video/mp4' />
                     Browser Anda tidak mendukung video tag.
                   </video>
                   <div className='team-social'>
@@ -144,12 +154,12 @@ export function Content() {
                 <div className='video-container'>
                   <img
                     className='img-fluid'
-                    src='/img/lofo sangaji.png'
+                    src={lofoSangajiImg}
                     alt='Video Thumbnail'
                     onClick={(event) => playVideo(event.currentTarget)}
                   />
                   <video className='img-fluid' controls>
-                    <source src='/video/video 3.mp4' type='video/mp4' />
+                    <source src={video3} type='video/mp4' />
                     Browser Anda tidak mendukung video tag.
                   </video>
                   <div className='team-social'>
@@ -182,12 +192,12 @@ export function Content() {
                 <div className='video-container'>
                   <img
                     className='img-fluid'
-                    src='/img/lofo sangaji.png'
+                    src={lofoSangajiImg}
                     alt='Video Thumbnail'
                     onClick={(event) => playVideo(event.currentTarget)}
                   />
                   <video className='img-fluid' controls>
-                    <source src='/video/video4.mp4' type='video/mp4' />
+                    <source src={video4} type='video/mp4' />
                     Browser Anda tidak mendukung video tag.
                   </video>
                   <div className='team-social'>
@@ -220,12 +230,12 @@ export function Content() {
                 <div className='video-container'>
                   <img
                     className='img-fluid'
-                    src='/img/lofo sangaji.png'
+                    src={lofoSangajiImg}
                     alt='Video Thumbnail'
                     onClick={(event) => playVideo(event.currentTarget)}
                   />
                   <video className='img-fluid' controls>
-                    <source src='/video/video5.mp4' type='video/mp4' />
+                    <source src={video5} type='video/mp4' />
                     Browser Anda tidak mendukung video tag.
                   </video>
                   <div className='team-social'>
@@ -258,12 +268,12 @@ export function Content() {
                 <div className='video-container'>
                   <img
                     className='img-fluid'
-                    src='/img/lofo sangaji.png'
+                    src={lofoSangajiImg}
                     alt='Video Thumbnail'
                     onClick={(event) => playVideo(event.currentTarget)}
                   />
                   <video className='img-fluid' controls>
-                    <source src='/video/video6.mp4' type='video/mp4' />
+                    <source src={video6} type='video/mp4' />
                     Browser Anda tidak mendukung video tag.
                   </video>
                   <div className='team-social'>
@@ -296,12 +306,12 @@ export function Content() {
                 <div className='video-container'>
                   <img
                     className='img-fluid'
-                    src='/img/lofo sangaji.png'
+                    src={lofoSangajiImg}
                     alt='Video Thumbnail'
                     onClick={(event) => playVideo(event.currentTarget)}
                   />
                   <video className='img-fluid' controls>
-                    <source src='/video/video7.mp4' type='video/mp4' />
+                    <source src={video7} type='video/mp4' />
                     Browser Anda tidak mendukung video tag.
                   </video>
                   <div className='team-social'>
@@ -334,12 +344,12 @@ export function Content() {
                 <div className='video-container'>
                   <img
                     className='img-fluid'
-                    src='/img/lofo sangaji.png'
+                    src={lofoSangajiImg}
                     alt='Video Thumbnail'
                     onClick={(event) => playVideo(event.currentTarget)}
                   />
                   <video className='img-fluid' controls>
-                    <source src='/video/8.mp4' type='video/mp4' />
+                    <source src={video8} type='video/mp4' />
                     Browser Anda tidak mendukung video tag.
                   </video>
                   <div className='team-social'>
@@ -386,7 +396,7 @@ export function Content() {
                 <div className='team-img position-relative overflow-hidden'>
                   <img
                     className='img-fluid'
-                    src='/img/img1.png'
+                    src={img1Img}
                     alt='Result 1 Image'
                   />
                   <div className='team-social'>

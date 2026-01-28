@@ -2,6 +2,11 @@ import { useAppointment } from '../lib/appointment-provider'
 import { TabPage } from './appointment-service'
 import CardService, { ServiceData } from './card-service'
 import { useI18n } from '../lib/i18n'
+import oilImg from '../assets/img/oil.jpeg'
+import washHairImg from '../assets/img/wash-hair.jpeg'
+import pijatImg from '../assets/img/pijat.jpg'
+import highImg from '../assets/img/high.jpg'
+import fullnihImg from '../assets/img/fullnih.png'
 
 export type Extra = {
   image: string
@@ -12,31 +17,31 @@ export type Extra = {
 
 const extraData: Extra[] = [
   {
-    image: '/img/oil.jpeg',
+    image: oilImg,
     alt: 'Oil Image',
     title: 'appointment.extra.oil',
     price: 7,
   },
   {
-    image: '/img/wash-hair.jpeg',
+    image: washHairImg,
     alt: 'Wash Hair Image',
     title: 'appointment.extra.wash',
     price: 5,
   },
   {
-    image: '/img/pijat.jpg',
+    image: pijatImg,
     alt: 'Scalp Massage Image',
     title: 'appointment.extra.massage',
     price: 10,
   },
   {
-    image: '/img/high.jpg',
+    image: highImg,
     alt: 'Scalp Massage Image',
     title: 'appointment.extra.highlight',
     price: 150,
   },
   {
-    image: '/img/fullnih.png',
+    image: fullnihImg,
     alt: 'Scalp Massage Image',
     title: 'appointment.extra.coloring',
     price: 250,

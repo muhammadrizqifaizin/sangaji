@@ -1,5 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useI18n } from '../lib/i18n'
+import aboutImg from '../assets/img/about.jpg'
+import team1 from '../assets/img/team-1.jpg'
+import team2 from '../assets/img/team-2.jpg'
+import team3 from '../assets/img/team-3.jpg'
 
 export const Route = createFileRoute('/about')({
   component: About,
@@ -7,7 +11,7 @@ export const Route = createFileRoute('/about')({
 
 export function About() {
   const { t } = useI18n()
-  
+
   return (
     <>
       <div
@@ -48,7 +52,7 @@ export function About() {
               <div className='d-flex flex-column position-relative'>
                 <img
                   className='img-fluid w-75 align-self-end'
-                  src='/img/about.jpg'
+                  src={aboutImg}
                   alt='About Image'
                   style={{ minHeight: '300px', objectFit: 'cover', backgroundColor: '#343a40' }}
                 />
@@ -114,7 +118,7 @@ export function About() {
                 <div className='team-img position-relative overflow-hidden'>
                   <img
                     className='img-fluid'
-                    src='/img/team-1.jpg'
+                    src={team1}
                     alt='Team 1 Image'
                   />
                   <div className='team-social'>
@@ -143,7 +147,7 @@ export function About() {
                 <div className='team-img position-relative overflow-hidden'>
                   <img
                     className='img-fluid'
-                    src='/img/team-2.jpg'
+                    src={team2}
                     alt='Team 2 Image'
                   />
                   <div className='team-social'>
@@ -172,7 +176,7 @@ export function About() {
                 <div className='team-img position-relative overflow-hidden'>
                   <img
                     className='img-fluid'
-                    src='/img/team-3.jpg'
+                    src={team3}
                     alt='Team 3 Image'
                   />
                   <div className='team-social'>
@@ -201,7 +205,7 @@ export function About() {
                 <div className='team-img position-relative overflow-hidden'>
                   <img
                     className='img-fluid'
-                    src='/img/team-4.jpg'
+                    src={team3}
                     alt='Team 4 Image'
                   />
                   <div className='team-social'>
@@ -230,7 +234,7 @@ export function About() {
                 <div className='team-img position-relative overflow-hidden'>
                   <img
                     className='img-fluid'
-                    src='/img/team-4.jpg'
+                    src={team3}
                     alt='Team 4 Image'
                   />
                   <div className='team-social'>

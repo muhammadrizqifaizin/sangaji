@@ -1,4 +1,6 @@
 import { useI18n } from '../lib/i18n'
+import carousel1 from '../assets/img/carousel-1.jpg'
+import carousel2 from '../assets/img/carousel-2.jpg'
 
 export default function Carousel() {
   const { t } = useI18n()
@@ -12,7 +14,7 @@ export default function Carousel() {
       >
         <div className='carousel-inner'>
           <div className='carousel-item active' style={{ height: '100vh', minHeight: '600px', position: 'relative', backgroundColor: '#191c24' }}>
-            <img className='w-100 h-100' src='/img/carousel-1.jpg' alt='Image' style={{ objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <img className='w-100 h-100' src={carousel1} alt='Image' style={{ objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
             <div className='carousel-caption d-flex align-items-center justify-content-center text-start w-100 h-100' style={{ zIndex: 1 }}>
               <div className='mx-sm-5 px-5' style={{ maxWidth: '900px' }}>
                 <h1 className='display-2 text-white text-uppercase mb-4 animated slideInDown'>
@@ -30,7 +32,7 @@ export default function Carousel() {
             </div>
           </div>
           <div className='carousel-item' style={{ height: '100vh', minHeight: '600px', position: 'relative', backgroundColor: '#191c24' }}>
-            <img className='w-100 h-100' src='/img/carousel-2.jpg' alt='Image' style={{ objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <img className='w-100 h-100' src={carousel2} alt='Image' style={{ objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
             <div className='carousel-caption d-flex align-items-center justify-content-center text-start w-100 h-100' style={{ zIndex: 1 }}>
               <div className='mx-sm-5 px-5' style={{ maxWidth: '900px' }}>
                 <h1 className='display-2 text-white text-uppercase mb-4 animated slideInDown'>

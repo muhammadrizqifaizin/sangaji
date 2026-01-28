@@ -2,6 +2,10 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { ServiceData } from '../components/card-service'
 import AppointmentService from '../components/appointment-service'
 import { useI18n } from '../lib/i18n'
+import carousel2 from '../assets/img/carousel-2.jpg'
+import beardtrimImg from '../assets/img/beardtrim.jpg'
+import fullnihImg from '../assets/img/fullnih.png'
+import mustacheImg from '../assets/img/mustache.jpg'
 
 type AppointmentSearch = {
   service?: number
@@ -21,7 +25,7 @@ export const Route = createFileRoute('/appointment')({
 // Gunakan KEY i18n untuk title dan description
 export const serviceData: ServiceData[] = [
   {
-    image: '/img/carousel-2.jpg',
+    image: carousel2,
     alt: 'Haircut Image',
     duration: '45m',
     description: 'service.haircut.desc',
@@ -29,7 +33,7 @@ export const serviceData: ServiceData[] = [
     price: 15,
   },
   {
-    image: '/img/beardtrim.jpg',
+    image: beardtrimImg,
     alt: 'Beard Trim Image',
     duration: '15m',
     title: 'service.beard.title',
@@ -37,7 +41,7 @@ export const serviceData: ServiceData[] = [
     price: 5,
   },
   {
-    image: '/img/fullnih.png',
+    image: fullnihImg,
     alt: 'Hair Dyeing Image',
     duration: '3h',
     title: 'service.dye.title',
@@ -45,7 +49,7 @@ export const serviceData: ServiceData[] = [
     price: 90,
   },
   {
-    image: '/img/mustache.jpg',
+    image: mustacheImg,
     alt: 'Mustache Image',
     duration: '15m',
     title: 'service.mustache.title',

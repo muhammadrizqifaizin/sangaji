@@ -1,6 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
 import TestimonialCarousel from '../components/testimonial-carousel'
 import { useI18n } from '../lib/i18n'
+import haircutImg from '../assets/img/haircut.png'
+import beardTrimImg from '../assets/img/beard-trim.png'
+import hairDyeingImg from '../assets/img/hair-dyeing.png'
+import mustacheImg from '../assets/img/mustache.png'
 
 export const Route = createFileRoute('/service')({
   component: Service,
@@ -66,7 +70,7 @@ export function Service() {
                 >
                   <img
                     className='img-fluid'
-                    src='/img/haircut.png'
+                    src={haircutImg}
                     alt='Haircut Image'
                   />
                 </div>
@@ -93,7 +97,7 @@ export function Service() {
                 >
                   <img
                     className='img-fluid'
-                    src='/img/beard-trim.png'
+                    src={beardTrimImg}
                     alt='Beard Trim Image'
                   />
                 </div>
@@ -118,7 +122,7 @@ export function Service() {
                   className='bg-dark d-flex flex-shrink-0 align-items-center justify-content-center'
                   style={{ width: '60px', height: '60px' }}
                 >
-                  <img className='img-fluid' src='img/hair-dyeing.png' alt='' />
+                  <img className='img-fluid' src={hairDyeingImg} alt='' />
                 </div>
                 <div className='ps-4'>
                   <h3 className='text-uppercase mb-3'>{t('service.dye.title')}</h3>
@@ -143,7 +147,7 @@ export function Service() {
                 >
                   <img
                     className='img-fluid'
-                    src='/img/mustache.png'
+                    src={mustacheImg}
                     alt='Mustache Image'
                   />
                 </div>

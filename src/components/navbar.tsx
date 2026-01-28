@@ -131,7 +131,7 @@ export default function Navbar() {
     // 1. Gunakan 'sticky-top'. Ini membuat navbar punya "fisik" sehingga konten di bawahnya turun (tidak tertutup).
     // 2. Tambahkan style "position: sticky" untuk memaksa browser menuruti aturan ini.
     <nav
-      className={`navbar navbar-expand-xl align-items-center sticky-top py-1 px-3 px-xl-5 ${theme === 'light' ? 'navbar-light' : 'navbar-dark'} navbar-scrolled`}
+      className={`navbar navbar-expand-xl align-items-center sticky-top py-3 py-xl-2 px-3 px-xl-5 ${theme === 'light' ? 'navbar-light' : 'navbar-dark'} navbar-scrolled`}
       style={{
         position: 'sticky', // PENTING: Agar tidak overlap
         top: hidden ? '-100px' : '0',

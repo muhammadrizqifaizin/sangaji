@@ -12,9 +12,10 @@ import { TabPage } from './appointment-service'
 import { type LatLngTuple } from 'leaflet'
 import L from 'leaflet'
 import { useI18n } from '../lib/i18n'
+import kurirImg from '../assets/img/kurir.png'
 
 const MarkerIcon = new L.Icon({
-  iconUrl: '/img/kurir.png',
+  iconUrl: kurirImg,
   iconSize: [55, 55],
 })
 

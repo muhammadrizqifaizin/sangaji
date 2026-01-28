@@ -4,6 +4,9 @@ import {
 } from '../lib/appointment-provider'
 import { TabPage } from './appointment-service'
 import { useI18n } from '../lib/i18n'
+import team1 from '../assets/img/team-1.jpg'
+import team2 from '../assets/img/team-2.jpg'
+import team3 from '../assets/img/team-3.jpg'
 
 export default function ChooseBarber({
   setActiveTab,
@@ -14,19 +17,19 @@ export default function ChooseBarber({
 
   const barberData: BarberType[] = [
     {
-      image: '/img/team-1.jpg',
+      image: team1,
       alt: 'Team 1 Image',
       name: 'Mr.z',
       description: 'appointment.barber.mrz.desc',
     },
     {
-      image: '/img/team-2.jpg',
+      image: team2,
       alt: 'Team 2 Image',
       name: 'Arif',
       description: 'appointment.barber.arif.desc',
     },
     {
-      image: '/img/team-3.jpg',
+      image: team3,
       alt: 'Team 3 Image',
       name: 'Karol',
       description: 'appointment.barber.karol.desc',
