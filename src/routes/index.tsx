@@ -2,7 +2,8 @@ import { createFileRoute } from '@tanstack/react-router'
 import Carousel from '../components/carousel'
 import TestimonialCarousel from '../components/testimonial-carousel'
 import { useI18n } from '../lib/i18n'
-import aboutImg from '../assets/img/about.jpg'
+import { Link } from '@tanstack/react-router'
+// import aboutImg from '../assets/img/about.jpg'
 import haircutImg from '../assets/img/haircut.png'
 import beardTrimImg from '../assets/img/beard-trim.png'
 import hairDyeingImg from '../assets/img/hair-dyeing.png'
@@ -32,7 +33,7 @@ export function Index() {
               <div className='d-flex flex-column position-relative'>
                 <img
                   className='img-fluid w-75 align-self-end'
-                  src={aboutImg}
+                  src={team1}
                   alt='About Image'
                   style={{ minHeight: '300px', objectFit: 'cover', backgroundColor: '#343a40' }}
                 />
@@ -79,143 +80,147 @@ export function Index() {
       </div>
       {/* About End */}
 
-      {/* Service Start */}
-      <div className='container-xxl py-5'>
-        <div className='container'>
+    {/* Service Start */}
+<div className='container-xxl py-5'>
+  <div className='container'>
+    <div
+      className='text-center mx-auto mb-5 wow fadeInUp'
+      data-wow-delay='0.1s'
+      style={{ maxWidth: '600px' }}
+    >
+      <p className='d-inline-block bg-secondary text-primary py-1 px-4'>
+        {t('service.subtitle')}
+      </p>
+      <h1 className='text-uppercase'>{t('service.heading')}</h1>
+    </div>
+
+    <div className='row g-4 justify-content-center'>
+
+      {/* Service 1: Haircut */}
+      <div className='col-lg-4 col-md-6 wow fadeInUp'>
+        <div className='service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0'>
           <div
-            className='text-center mx-auto mb-5 wow fadeInUp'
-            data-wow-delay='0.1s'
-            style={{ maxWidth: '600px' }}
+            className='bg-dark d-flex flex-shrink-0 align-items-center justify-content-center'
+            style={{ width: 60, height: 60 }}
           >
-            <p className='d-inline-block bg-secondary text-primary py-1 px-4'>
-              {t('service.subtitle')}
-            </p>
-            <h1 className='text-uppercase'>{t('service.heading')}</h1>
+            <img className='img-fluid' src={haircutImg} alt='Haircut' />
           </div>
 
-          {/* PERUBAHAN DI SINI: tambahkan 'justify-content-center' */}
-          <div className='row g-4 justify-content-center'>
-
-            {/* Service 1: Haircut */}
-            <div
-              className='col-lg-4 col-md-6 wow fadeInUp'
-              data-wow-delay='0.1s'
-            >
-              <div className='service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0'>
-                <div
-                  className='bg-dark d-flex flex-shrink-0 align-items-center justify-content-center'
-                  style={{ width: '60px', height: '60px' }}
-                >
-                  <img
-                    className='img-fluid'
-                    src={haircutImg}
-                    alt='Haircut Image'
-                  />
-                </div>
-                <div className='ps-4'>
-                  <h3 className='text-uppercase mb-3'>{t('service.haircut.title')}</h3>
-                  <p>
-                    {t('service.haircut.desc')}
-                  </p>
-                  <span className='text-uppercase text-primary'>{t('service.haircut.price')}</span>
-                </div>
-                <a className='btn btn-square' href=''>
-                  <i className='fa fa-plus text-primary'></i>
-                </a>
-              </div>
-            </div>
-
-            {/* Service 2: Beard Trim */}
-            <div
-              className='col-lg-4 col-md-6 wow fadeInUp'
-              data-wow-delay='0.3s'
-            >
-              <div className='service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0'>
-                <div
-                  className='bg-dark d-flex flex-shrink-0 align-items-center justify-content-center'
-                  style={{ width: '60px', height: '60px' }}
-                >
-                  <img
-                    className='img-fluid'
-                    src={beardTrimImg}
-                    alt='Beard Trim Image'
-                  />
-                </div>
-                <div className='ps-4'>
-                  <h3 className='text-uppercase mb-3'>{t('service.beard.title')}</h3>
-                  <p>
-                    {t('service.beard.desc')}
-                  </p>
-                  <span className='text-uppercase text-primary'>{t('service.beard.price')}</span>
-                </div>
-                <a className='btn btn-square' href=''>
-                  <i className='fa fa-plus text-primary'></i>
-                </a>
-              </div>
-            </div>
-
-            {/* Service 3: Hair Dyeing */}
-            <div
-              className='col-lg-4 col-md-6 wow fadeInUp'
-              data-wow-delay='0.1s'
-            >
-              <div className='service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0'>
-                <div
-                  className='bg-dark d-flex flex-shrink-0 align-items-center justify-content-center'
-                  style={{ width: '60px', height: '60px' }}
-                >
-                  <img
-                    className='img-fluid'
-                    src={hairDyeingImg}
-                    alt='Hair Dyeing Image'
-                  />
-                </div>
-                <div className='ps-4'>
-                  <h3 className='text-uppercase mb-3'>{t('service.dye.title')}</h3>
-                  <p>
-                    {t('service.dye.desc')}
-                  </p>
-                  <span className='text-uppercase text-primary'>{t('service.dye.price')}</span>
-                </div>
-                <a className='btn btn-square' href=''>
-                  <i className='fa fa-plus text-primary'></i>
-                </a>
-              </div>
-            </div>
-
-            {/* Service 4: Mustache */}
-            <div
-              className='col-lg-4 col-md-6 wow fadeInUp'
-              data-wow-delay='0.3s'
-            >
-              <div className='service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0'>
-                <div
-                  className='bg-dark d-flex flex-shrink-0 align-items-center justify-content-center'
-                  style={{ width: '60px', height: '60px' }}
-                >
-                  <img
-                    className='img-fluid'
-                    src={mustacheImg}
-                    alt='Mustache Image'
-                  />
-                </div>
-                <div className='ps-4'>
-                  <h3 className='text-uppercase mb-3'>{t('service.mustache.title')}</h3>
-                  <p>
-                    {t('service.mustache.desc')}
-                  </p>
-                  <span className='text-uppercase text-primary'>{t('service.mustache.price')}</span>
-                </div>
-                <a className='btn btn-square' href=''>
-                  <i className='fa fa-plus text-primary'></i>
-                </a>
-              </div>
-            </div>
-
+          <div className='ps-4'>
+            <h3 className='text-uppercase mb-3'>
+              {t('service.haircut.title')}
+            </h3>
+            <p>{t('service.haircut.desc')}</p>
+            <span className='text-uppercase text-primary'>
+              {t('service.haircut.price')}
+            </span>
           </div>
+
+          <Link
+            to='/appointment'
+            search={{ service: 1 }}
+            className='btn btn-square'
+          >
+            <i className='fa fa-plus text-primary'></i>
+          </Link>
         </div>
       </div>
-      {/* Service End */}
+
+      {/* Service 2: Beard Trim */}
+      <div className='col-lg-4 col-md-6 wow fadeInUp'>
+        <div className='service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0'>
+          <div
+            className='bg-dark d-flex flex-shrink-0 align-items-center justify-content-center'
+            style={{ width: 60, height: 60 }}
+          >
+            <img className='img-fluid' src={beardTrimImg} alt='Beard Trim' />
+          </div>
+
+          <div className='ps-4'>
+            <h3 className='text-uppercase mb-3'>
+              {t('service.beard.title')}
+            </h3>
+            <p>{t('service.beard.desc')}</p>
+            <span className='text-uppercase text-primary'>
+              {t('service.beard.price')}
+            </span>
+          </div>
+
+          <Link
+            to='/appointment'
+            search={{ service: 2 }}
+            className='btn btn-square'
+          >
+            <i className='fa fa-plus text-primary'></i>
+          </Link>
+        </div>
+      </div>
+
+      {/* Service 3: Hair Dyeing */}
+      <div className='col-lg-4 col-md-6 wow fadeInUp'>
+        <div className='service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0'>
+          <div
+            className='bg-dark d-flex flex-shrink-0 align-items-center justify-content-center'
+            style={{ width: 60, height: 60 }}
+          >
+            <img className='img-fluid' src={hairDyeingImg} alt='Hair Dyeing' />
+          </div>
+
+          <div className='ps-4'>
+            <h3 className='text-uppercase mb-3'>
+              {t('service.dye.title')}
+            </h3>
+            <p>{t('service.dye.desc')}</p>
+            <span className='text-uppercase text-primary'>
+              {t('service.dye.price')}
+            </span>
+          </div>
+
+          <Link
+            to='/appointment'
+            search={{ service: 3 }}
+            className='btn btn-square'
+          >
+            <i className='fa fa-plus text-primary'></i>
+          </Link>
+        </div>
+      </div>
+
+      {/* Service 4: Mustache */}
+      <div className='col-lg-4 col-md-6 wow fadeInUp'>
+        <div className='service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0'>
+          <div
+            className='bg-dark d-flex flex-shrink-0 align-items-center justify-content-center'
+            style={{ width: 60, height: 60 }}
+          >
+            <img className='img-fluid' src={mustacheImg} alt='Mustache' />
+          </div>
+
+          <div className='ps-4'>
+            <h3 className='text-uppercase mb-3'>
+              {t('service.mustache.title')}
+            </h3>
+            <p>{t('service.mustache.desc')}</p>
+            <span className='text-uppercase text-primary'>
+              {t('service.mustache.price')}
+            </span>
+          </div>
+
+          <Link
+            to='/appointment'
+            search={{ service: 4 }}
+            className='btn btn-square'
+          >
+            <i className='fa fa-plus text-primary'></i>
+          </Link>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{/* Service End */}
+
 
       {/* Price Start */}
       <div className='container-xxl py-5'>

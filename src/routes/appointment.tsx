@@ -13,16 +13,15 @@ type AppointmentSearch = {
 
 export const Route = createFileRoute('/appointment')({
   validateSearch: (search: Record<string, unknown>): AppointmentSearch => {
-    if (search.service)
-      return {
-        service: Number(search?.service),
-      }
+    if (search.service) {
+      return { service: Number(search.service) }
+    }
     return {}
   },
   component: Appointment,
 })
 
-// Gunakan KEY i18n untuk title dan description
+// DATA SERVICE
 export const serviceData: ServiceData[] = [
   {
     image: carousel2,
@@ -62,12 +61,14 @@ export function Appointment() {
   const { service } = Route.useSearch()
   const { t } = useI18n()
 
-  if (service && service > 0 && service <= 5)
+  if (service && service > 0 && service <= 5) {
     return <AppointmentService service={service} />
+  }
 
   return (
     <div className='container-xxl py-5'>
       <div className='container'>
+        {/* HEADER */}
         <div
           className='text-center mx-auto mb-5 wow fadeInUp'
           data-wow-delay='0.1s'
@@ -78,7 +79,9 @@ export function Appointment() {
           </p>
           <h1 className='text-uppercase'>{t('service.heading')}</h1>
         </div>
-        <div className='row g-4'>
+
+        {/* ROW CENTER */}
+        <div className='row g-4 justify-content-center'>
           {serviceData.map(
             ({ image, price, duration, title, alt, description }, index) => (
               <div
@@ -86,8 +89,9 @@ export function Appointment() {
                 data-wow-delay='0.1s'
                 key={index}
               >
-                <div className='appointment-item position-relative overflow-hidden bg-secondary h-100 d-flex flex-column'>
-                  {/* IMAGE CONTAINER DENGAN ASPECT RATIO */}
+                <div className='appointment-item position-relative overflow-hidden bg-secondary h-100 d-flex flex-column text-center'>
+                  
+                  {/* IMAGE */}
                   <div
                     className='w-100 position-relative'
                     style={{ aspectRatio: '4 / 3', overflow: 'hidden' }}
@@ -99,11 +103,10 @@ export function Appointment() {
                       style={{
                         objectFit: 'cover',
                         objectPosition: 'center',
-                        width: '100%',
-                        height: '100%',
                         display: 'block',
                       }}
                     />
+
                     <span
                       className='badge rounded-pill position-absolute z-1'
                       style={{
@@ -114,6 +117,7 @@ export function Appointment() {
                     >
                       Primary
                     </span>
+
                     <span
                       className='badge rounded-pill position-absolute z-1'
                       style={{
@@ -126,7 +130,7 @@ export function Appointment() {
                     </span>
                   </div>
 
-                  {/* KONTEN */}
+                  {/* CONTENT */}
                   <div className='p-4 flex-grow-1 d-flex flex-column justify-content-between'>
                     <div>
                       <h3 className='text-uppercase mb-3'>{t(title)}</h3>
@@ -136,15 +140,20 @@ export function Appointment() {
                         {t('general.from')} {price}K
                       </span>
                     </div>
+
                     <Link
                       to='/appointment'
                       search={{ service: index + 1 }}
                     >
-                      <button type='button' className='btn btn-primary mt-3'>
+                      <button
+                        type='button'
+                        className='btn btn-primary mt-3 mx-auto d-block'
+                      >
                         {t('general.book_now')}
                       </button>
                     </Link>
                   </div>
+
                 </div>
               </div>
             )
